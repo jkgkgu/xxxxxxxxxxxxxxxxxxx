@@ -68,7 +68,7 @@ uci set network.wan.proto='pppoe'
 uci set network.lan.ipaddr='192.168.9.254'                      # IPv4 地址(openwrt后台地址)
 uci set network.lan.netmask='255.255.255.0'                     # IPv4 子网掩码
 uci set network.lan.gateway='192.168.9.1'                       # IPv4 网关
-uci set network.lan.broadcast='192.168.9.255'                   # IPv4 广播
+#uci set network.lan.broadcast='192.168.9.255'                   # IPv4 广播
 uci set network.lan.dns='114.114.114.114'             # DNS(多个DNS要用空格分开)
 uci delete network.lan.ip6assign                                # 接口→LAN→IPv6 分配长度——关闭，恢复uci set network.lan.ip6assign='64'
 uci commit network
