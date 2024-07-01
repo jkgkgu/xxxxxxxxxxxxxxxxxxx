@@ -132,8 +132,6 @@ jobs:
         echo "UPLOAD_RELEASES=${{ github.event.inputs.UPLOAD_RELEASES }}" >> $GITHUB_ENV
         echo "UPLOAD_BIN_ARTIFACTS=${{ github.event.inputs.UPLOAD_BIN_ARTIFACTS }}" >> $GITHUB_ENV
 
-    - name: SSH远程连接（make menuconfig）
-
     - name: 生成config
       run: |
         cd $OPENWRT_PATH && make defconfig && ./scripts/diffconfig.sh > AAA.txt
