@@ -94,9 +94,9 @@ uci commit system
 uci set ttyd.@ttyd[0].command='/bin/login -f root'             # 设置ttyd免帐号登录
 uci commit ttyd
 
-uci set luci.main.mediaurlbase='/luci-static/bootstrap-dark'
+#设置主题为Argon
+uci set luci.main.mediaurlbase='/luci-static/argon'
 uci commit luci
-
 
 # 设置ddns-go为开启状态
 uci set ddns-go.config.@basic[0].enabled=1
@@ -134,7 +134,7 @@ exit 0
 EOF
 
 sed -i '3s/0/1/g' package/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
-sed -i '10s/1.1.1.1/8.8.8.8/g' package/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
+sed -i '11s/1.1.1.1/8.8.8.8/g' package/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
 sed -i '35s/60/10/g' package/passwall/luci-app-passwall/root/usr/share/passwall/0_default_config
 
 echo "
