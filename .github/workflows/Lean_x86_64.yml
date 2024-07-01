@@ -133,8 +133,6 @@ jobs:
         echo "UPLOAD_BIN_ARTIFACTS=${{ github.event.inputs.UPLOAD_BIN_ARTIFACTS }}" >> $GITHUB_ENV
 
     - name: SSH远程连接（make menuconfig）
-      if: env.SSH_ACTION == 'true'
-      uses: csexton/debugger-action@master
 
     - name: 生成config
       run: |
