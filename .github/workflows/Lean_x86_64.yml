@@ -14,7 +14,7 @@ on:
       CACHE_TOOLCHAIN:
         description: '缓存加速编译'
         required: false
-        default: 'true'
+        default: 'false'
         type: boolean
       UPLOAD_RELEASES:
         description: '上传固件到 Releases'
