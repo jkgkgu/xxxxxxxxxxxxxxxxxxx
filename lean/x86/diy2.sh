@@ -40,6 +40,7 @@ CONFIG_PACKAGE_luci-app-store=y
 cp -f $GITHUB_WORKSPACE/images/bg2.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
 cp -f $GITHUB_WORKSPACE/images/firewall.config package/network/config/firewall/files/firewall.config
 cp -f $GITHUB_WORKSPACE/images/dropbear.config package/network/services/dropbear/files/dropbear.config
+sed -i 's/("iStore"),/("应用中心"),/g' package/linpc/luci-app-store/luasrc/controller/store.lua
 
 # 修改欢迎 banner
 cp -f $GITHUB_WORKSPACE/images/banner package/base-files/files/etc/banner
