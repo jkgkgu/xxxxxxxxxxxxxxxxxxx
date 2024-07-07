@@ -9,7 +9,7 @@ git clone https://github.com/MilesPoupart/luci-app-vssr package/luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb package/lua-maxminddb
 git clone https://github.com/linkease/istore package/istore
 git clone https://github.com/linkease/istore-ui package/istore-ui
-git clone --depth=1 https://github.com/fw876/helloworld package/helloworld
+#git clone --depth=1 https://github.com/fw876/helloworld package/helloworld
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 
