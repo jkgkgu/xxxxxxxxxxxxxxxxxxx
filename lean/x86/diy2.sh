@@ -15,9 +15,8 @@ git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/lu
 
 # 添加自定义软件包
 echo '
-CONFIG_PACKAGE_docker=y
-CONFIG_PACKAGE_docker-compose=y
-CONFIG_PACKAGE_dockerd=y
+CONFIG_PACKAGE_luci-app-docker=y
+CONFIG_PACKAGE_luci-app-dockerman=y
 CONFIG_PACKAGE_luci-app-webadmin=y                  #Web管理
 CONFIG_PACKAGE_luci-app-ttyd=y                      #ttyd
 CONFIG_PACKAGE_luci-app-diskman=y                   #磁盘管理
