@@ -3,11 +3,13 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
 
 # 拉取仓库数据
-git clone --depth=1 https://github.com/fw876/helloworld package/helloworld
 git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 git clone https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
 git clone https://github.com/MilesPoupart/luci-app-vssr package/luci-app-vssr
 git clone https://github.com/jerrykuku/lua-maxminddb package/lua-maxminddb
+git clone https://github.com/linkease/istore package/istore
+git clone https://github.com/linkease/istore-ui package/istore-ui
+git clone --depth=1 https://github.com/fw876/helloworld package/helloworld
 git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 
@@ -28,6 +30,7 @@ CONFIG_PACKAGE_luci-app-ddns-go=y                   #动态DDNS
 CONFIG_PACKAGE_ddns-go=y                            #DDNS-GO	
 CONFIG_PACKAGE_luci-app-socat=y                     #Socat
 CONFIG_PACKAGE_luci-app-cpufreq=y                   #CPU 性能优化调节
+CONFIG_PACKAGE_luci-app-store=y
 ' >> .config
 
 # 修改 argon 为默认主题
