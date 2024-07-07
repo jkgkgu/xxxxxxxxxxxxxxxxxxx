@@ -35,6 +35,7 @@ env:
   DIY_P1_SH: lean/x86/diy1.sh
 # 加载自定义配置
   DIY_P2_SH: lean/x86/diy2.sh
+  DIY_P3_SH: sh/ad.sh
 
   CLASH_KERNEL: amd64
 
@@ -115,6 +116,11 @@ jobs:
         chmod +x $DIY_P2_SH
         cd $OPENWRT_PATH
         $GITHUB_WORKSPACE/$DIY_P2_SH
+
+    - name: 下载ad核心
+      run: |
+        chmod +x $DIY_P3_SH
+        $GITHUB_WORKSPACE/$DIY_P3_SH
 
     - name: 生成变量
       run: |
